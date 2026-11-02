@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Panel from "./Panel";
 
 const szinek = [
   { nev: "Piros", rgb: "rgb(255, 0, 0)" },
@@ -33,6 +34,7 @@ function App() {
       </select>
 
       {valasztott && <p>A választott szín: {valasztott.nev}</p>}
+      {valasztott && <Panel szin={valasztott} />}
     </div>
   );
 }
